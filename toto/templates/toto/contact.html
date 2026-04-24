@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Blood Base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #c62828;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #c62828;
+            margin-bottom: 2rem;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .contact-form,
+        .contact-info {
+            background: white;
+            flex: 1;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            min-width: 300px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #c62828;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e53935;
+        }
+
+        .contact-info i {
+            color: #c62828;
+            margin-right: 10px;
+        }
+
+        .map {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color:  #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                flex-direction: column;
+            }
+        }
+        
+    .welcome-container {
+        background-color:rgb(235, 228, 228);
+        padding: 40px;
+        margin: 5px auto;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(199, 250, 215, 0.1);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .welcome-container p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+         
+
+    }
+
+    .welcome-container a {
+        color:rgb(168, 239, 199);
+        font-weight: bold;
+        text-decoration: none;
+        
+    }
+
+    .welcome-container a:hover {
+        text-decoration: underline;
+    }
+    .btn-primary {
+    padding: 0.45rem 1rem;
+    background-color:rgb(17, 20, 230);
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin:10px;
+    margin-bottom:5px;
+   margin-top: 3px;
+    text-decoration: none;
+}
+.welcome-user {
+  color: #e0f2f1;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.welcome-user:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: default;
+}
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
+        <div class="container-fluid">
+            <div class="fs-4 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-heart-pulse-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z">
+                    </path>
+                    <path
+                        d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z">
+                    </path>
+                </svg>
+                WELCOME
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="main.html">Home</a>
+                    </li>
+                    <a class="nav-link text-white" href="about.html">About us</a>
+                    <a class="nav-link text-white" href="service.html">Services</a>
+                   
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                    <a class="nav-link text-white" href="order.html">Request</a>
+
+                </ul>
+                {% if user.is_authenticated %}
+      <span class="navbar-text welcome-user mt-2 mt-lg-0 ms-3">
+        Welcome {{ request.user.username }}
+      </span>
+    {% endif %}
+             
+                 <div class="dropdown mx-0">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Log Out
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="main.html">Stay Signed in</a></li>
+                        <li><a class="dropdown-item" href="index.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Contact Blood Base</h1>
+        <p>We’d love to hear from you! Reach out anytime.</p>
+    </header>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form action="{%url 'contact'%}" method="post">{% csrf_token %}
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                    </svg> Bishalchowk, Bharatpur, Chitwan</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg> 9812345678, 9812343434</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                    </svg> bloodbase123@gmail.com</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                    </svg> Sun - Fri: 9:00am - 5:00pm</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Blood Base. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

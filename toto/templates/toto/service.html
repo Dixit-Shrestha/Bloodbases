@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fffafa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(rgba(211, 47, 47, 0.8), rgba(211, 47, 47, 0.8)),
+                url('https://images.unsplash.com/photo-1588776814546-ec7c9b04f65e?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transition: 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #d32f2f;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .cta {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .cta a {
+            background: white;
+            color: #d32f2f;
+            padding: 12px 25px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background: #f5f5f5;
+        }
+
+        footer {
+            background-color:  #b71c1c;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .cta h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+    .welcome-container {
+        background-color:rgb(235, 228, 228);
+        padding: 40px;
+        margin: 5px auto;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(199, 250, 215, 0.1);
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .welcome-container p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+         
+
+    }
+
+    .welcome-container a {
+        color:rgb(168, 239, 199);
+        font-weight: bold;
+        text-decoration: none;
+        
+    }
+
+    .welcome-container a:hover {
+        text-decoration: underline;
+    }
+    .btn-primary {
+    padding: 0.45rem 1rem;
+    background-color:rgb(17, 20, 230);
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin:10px;
+    margin-bottom:5px;
+   margin-top: 3px;
+    text-decoration: none;
+}
+.welcome-user {
+  color: #e0f2f1;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.welcome-user:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: default;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
+        <div class="container-fluid">
+            <div class="fs-4 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-heart-pulse-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z">
+                    </path>
+                    <path
+                        d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z">
+                    </path>
+                </svg>
+                WELCOME
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="main.html">Home</a>
+                    </li>
+                    <a class="nav-link text-white" href="about.html">About us</a>
+                   <li class="nav-item">
+                        <a class="nav-link active text-white " aria-current="page" href="#">Services</a>
+                    </li>
+                    <a class="nav-link text-white" href="contact.html">Contact</a>
+                    <a class="nav-link text-white" href="order.html">Request</a>
+                   
+                </ul>
+              {% if user.is_authenticated %}
+      <span class="navbar-text welcome-user mt-2 mt-lg-0 ms-3">
+        Welcome {{ request.user.username }}
+      </span>
+    {% endif %}
+                 <div class="dropdown mx-0">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Log Out
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="main.html">Stay Signed in</a></li>
+                        <li><a class="dropdown-item" href="index.html">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Blood Donation & Health Services</h1>
+        <p>We offer a range of life-saving services to help communities, support hospitals, and promote wellness for
+            all.</p>
+    </header>
+
+    <!-- Services Grid -->
+    <div class="container">
+        <div class="grid">
+
+            <div class="card">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6M6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13" />
+                    </svg> Blood Donation
+                </h3>
+                <p>Donate whole blood, plasma, or platelets and help save lives. Safe, easy, and impactful.</p>
+            </div>
+
+            <div class="card">
+                <h3> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-building" viewBox="0 0 16 16">
+                        <path
+                            d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                        <path
+                            d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                    </svg> Health Checkups</h3>
+                <p>Free pre-donation health screenings for blood pressure, hemoglobin levels, and more.</p>
+            </div>
+
+            <div class="card">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bell-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                    </svg> Notification Alerts</h3>
+                <p>Get notified when your blood type is needed or when donation camps are near you.</p>
+            </div>
+
+            <div class="card">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-raised-hand" viewBox="0 0 16 16">
+                        <path
+                            d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207" />
+                        <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+                    </svg> Volunteering</h3>
+                <p>Join our volunteer network to assist during drives, manage events, or spread awareness.</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg> Membership
+                </h3>
+                <p>You can buy our membership program to enjoy our services with ease at just $99/month.</p>
+            </div>
+
+            <div class="card">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
+                    </svg> Awareness Campaigns</h3>
+                <p>We run campaigns to educate people on the importance of regular blood donation and health safety.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Join Our Life-Saving Mission</h2>
+        <p>Become a donor, volunteer, or health advocate today. Every action counts.</p>
+        <a href="register.html">📅 Register as Donor</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Blood Base. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
